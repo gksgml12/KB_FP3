@@ -8,9 +8,9 @@ function onGeoOk(position){
         const city = document.querySelector("#location p:first-Child")
         const weather = document.querySelector("#location p:nth-Child(2)")
         const location = document.querySelector("#location p:last-Child")
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`
-        city.innerText = data.name;
-        location.innerText= `${lat} / ${lon}`
+        city.innerText = `현재 위치: ${data.name}`;
+        weather.innerText = `현재 날씨: ${data.weather[0].main} / 현재 온도: ${data.main.temp}`
+        location.innerText= `위도: ${lat} / 경도: ${lon}`
         });
 }
 
