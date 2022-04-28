@@ -218,7 +218,7 @@ function removeAllChildNods(el) {
 
 function restuarnatsListBtnClick(e) {
     e.preventDefault();
-    var cate = FD6
+    var search = placeName.value
 }
 
-btn.addEventListener("click",restuarnatsListBtnClick)
+btn.addEventListener("submit",restuarnatsListBtnClick)

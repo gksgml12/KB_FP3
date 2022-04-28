@@ -13,16 +13,18 @@
     </div>
     <form>
       <div class="form-group">
-        <label for="placeName">장소검색</label>
+        <label for="exampleInputEmail1">장소검색</label>
         <input
           type="text"
           class="form-control"
-          id="placeName"
+          id="exampleInputEmail1"
           placeholder="장소"
         />
+        <small id="emailHelp" class="form-text text-muted"
+          >장소가 없을 수 있음</small
+        >
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-    </form>
     </form>
     <div>
       <ol>
@@ -45,6 +47,6 @@
 
       var map = new kakao.maps.Map(container, options);
     </script>
-    <script src="js/restuarant_list.js"></script>
+    <script src="js/place_search.js"></script>
   </body>
 </html>

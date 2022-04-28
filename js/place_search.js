@@ -1,7 +1,7 @@
 // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 const btn = document.querySelector('.btn btn-primary')
-const exampleInputEmail1 = document.querySelector('#exampleInputEmail1')
+const placeName = document.querySelector('#placeName')
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
@@ -57,7 +57,7 @@ function displayMarker(place) {
 
 function restuarnatsListBtnClick(e) {
     e.preventDefault();
-    var search = exampleInputEmail1.value
+    var search = placeName.value
 }
 
-btn.addEventListener("click",restuarnatsListBtnClick)
+btn.addEventListener("submit",restuarnatsListBtnClick)
