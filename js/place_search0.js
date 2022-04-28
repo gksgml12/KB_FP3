@@ -1,4 +1,3 @@
-<script>
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 
 var mapContainer = document.getElementById('map'), 
@@ -40,4 +39,3 @@ function displayMarker(place) {
         infowindow.open(map, marker);
     });
 }
-</script>
