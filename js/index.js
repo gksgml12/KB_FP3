@@ -27,8 +27,13 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     };
 
 // var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+var moveLatLon = new kakao.maps.LatLng(lat, lon);
+    
+// 지도 중심을 이동 시킵니다
+map.setCenter(moveLatLon);
 
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+var markerPosition  = new kakao.maps.LatLng(lat, lon);
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
