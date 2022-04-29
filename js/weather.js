@@ -7,7 +7,7 @@ function onGeoOk(position){
     fetch(url).then(response => response.json()).then(data => {
         const city = document.querySelector("#location p:first-Child")
         const weather = document.querySelector("#location p:nth-child(2)")
-        const loc = document.querySelector("#location p:last-Child")
+        const loc = document.querySelector("#location p:nth-child(3)")
         weather.innerText = `${data.weather[0].main} / ${data.main.temp}`
         city.innerText = data.name;
         loc.innerText = `위도: ${lat}, 경도: ${lon}`
