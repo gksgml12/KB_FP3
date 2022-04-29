@@ -30,18 +30,6 @@
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=299130bb707a126f0bc34276fabfa388&libraries=services"
     ></script>
     <script>
-      const API_KEY = "d2c902d6ac6326cbb6156dacfebcb420";
-
-      function onGeoOk(position){
-        const lat = position.coords.latitude;
-        const lon = position.coords.longitude;
-
-      function onGeoError(){
-          alert("Can't find you. No weather for ypu")
-      }
-
-      navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError)
-
       var container = document.getElementById("map");
       var options = {
         center: new kakao.maps.LatLng(lat, lon),
