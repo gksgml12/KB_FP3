@@ -5,12 +5,29 @@
     <title>키워드로 장소검색하기</title>
   </head>
   <body>
-    <div id="map" style="width: 100%; height: 350px"></div>
+    <div id="header"><h1>현재 정보 페이지</h1></div>
+    <div class="grid-container">
+      <div class="grid-item" id="map" style="width: 80%; height: 100%"></div>
+      <div class="grid-item" id="location">
+        <p></p>
+        <p></p>
+        <p></p>
+        <ol>
+          <li><a href="index.html">현재위치 페이지</a></li>
+          <li><a href="place_search0.html">짜장면 검색 페이지</a></li>
+          <li><a href="place_search.html">장소 검색 페이지</a></li>
+          <li><a href="restuarant_list0.html">짜장면 음식점들 페이지</a></li>
+          <li><a href="restuarants.html">음식점들 페이지</a></li>
+          <li><a href="restuarant_list.html">검색 목록 페이지</a></li>
+        </ol>
+      </div>
+    </div>
 
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=299130bb707a126f0bc34276fabfa388&libraries=services"
     ></script>
+
     <script>
       var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
 
