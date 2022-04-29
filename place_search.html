@@ -3,13 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <title>Kakao 지도 시작하기</title>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <div id="map" style="width: 500px; height: 400px"></div>
-    <div id="location">
+    <div class="left" id="map" style="width: 500px; height: 400px"></div>
+    <div class="right" id="location">
       <p></p>
       <p></p>
       <p></p>
+      <ol>
+        <li><a href="index.html">현재위치 페이지</a></li>
+        <li><a href="place_search0.html">짜장면 검색 페이지</a></li>
+        <li><a href="place_search.html">장소 검색 페이지</a></li>
+        <li><a href="restuarant_list0.html">짜장면 음식점들 페이지</a></li>
+        <li><a href="restuarants.html">음식점들 페이지</a></li>
+        <li><a href="restuarant_list.html">검색 목록 페이지</a></li>
+      </ol>
     </div>
     <form>
       <div class="form-group">
@@ -23,14 +32,6 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
-    <div>
-      <ol>
-        <li><a href="index.html">현재위치 페이지</a></li>
-        <li><a href="place_search.html">장소 검색 페이지</a></li>
-        <li><a href="restuarants.html">음식점들 페이지</a></li>
-        <li><a href="restuarant_list.html">검색 목록 페이지</a></li>
-      </ol>
-    </div>
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=299130bb707a126f0bc34276fabfa388"
