@@ -2,6 +2,7 @@
 var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 const btn = document.querySelector('.btn btn-primary')
 const placeName = document.querySelector('#placeName')
+var search = placeName.value
 
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
