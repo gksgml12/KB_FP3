@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="grid-container">
-      <div class="grid-item" id="map" style="width: 50%; height: 100%"></div>
+      <div id="staticMap" style="width:600px;height:350px;"></div>
       <div class="grid-item" id="location">
       <p></p>
       <p></p>
@@ -37,15 +37,16 @@
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=299130bb707a126f0bc34276fabfa388&libraries=services"
     ></script>
-    <script>
-      var container = document.getElementById("map");
-      var options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3,
-      };
+<script>
+var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
+    staticMapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 이미지 지도의 중심좌표
+        level: 3 // 이미지 지도의 확대 레벨
+    };
 
-      var map = new kakao.maps.Map(container, options);
-    </script>
+// 이미지 지도를 표시할 div와 옵션으로 이미지 지도를 생성합니다
+var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+</script>
     <script src="js/restuarants.js"></script>
     <script src="js/index.js"></script>
   </body>
