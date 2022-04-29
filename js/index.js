@@ -12,6 +12,8 @@ function onGeoOk(position){
         city.innerText = `현재 위치: ${data.name}`;
         weather.innerText = `현재 날씨: ${data.weather[0].main} / 현재 온도: ${data.main.temp}`;
         location.innerText= `위도: ${lat}  경도: ${lon}`
+        var aaa=1;
+        bbb=2;
         });
 }
 
@@ -35,7 +37,8 @@ map.setCenter(moveLatLon);
 
 
 var markerPosition  = new kakao.maps.LatLng(lat, lon);
-
+var aaa=1
+bbb=2
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
     position: markerPosition
