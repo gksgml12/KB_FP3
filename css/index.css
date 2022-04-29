@@ -3,6 +3,9 @@
     padding: 10px;
     border:1px solid yellow;
 }
+#grid-item{
+    border:1px solid black;
+}
 
 
 /* div {
