@@ -12,7 +12,7 @@ function onGeoOk(position){
         },
         {
             position: new kakao.maps.LatLng(lat, lon), 
-            text: 'placeName' // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
+            text: placeName // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
         }
     ];
     
@@ -64,6 +64,12 @@ function onGeoOk(position){
         weather.innerText = `현재 날씨: ${data.weather[0].main} / 현재 온도: ${data.main.temp}`;
         location.innerText= `위도: ${lat}  경도: ${lon}`
         });
+
+        var aTag = document.createElement('a');
+        aTag.setAttribute('href',f"https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place");
+        // aTag.innerText = "link text";
+        staticMap.appendChild(aTag);
+    
 }
 
 function onGeoError(){
