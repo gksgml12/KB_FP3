@@ -31,7 +31,8 @@ var moveLatLon = new kakao.maps.LatLng(lat, lon);
     
 // 지도 중심을 이동 시킵니다
 map.setCenter(moveLatLon);
-
+let lat;
+let lon;
 
 var markerPosition  = new kakao.maps.LatLng(lat, lon);
 
