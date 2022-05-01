@@ -17,15 +17,20 @@ function onGeoOk(position){
     // 지도 중심을 이동 시킵니다
     // map.setCenter(moveLatLon);
 
-    var markerPosition  = new kakao.maps.LatLng(lat, lon);
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
 
     // 마커를 생성합니다
     var marker = new kakao.maps.Marker({
         position: markerPosition
-
-    marker.setMap(map);
-    
     });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    var geocoder = new kakao.maps.services.Geocoder();
+    searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+
 
     fetch(url).then(response => response.json()).then(data => {
         const city = document.querySelector("#location p:first-Child")
