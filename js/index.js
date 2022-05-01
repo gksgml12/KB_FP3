@@ -65,10 +65,10 @@ function onGeoOk(position){
         location.innerText= `위도: ${lat}  경도: ${lon}`
         });
 
-        var aTag = document.createElement('a');
-        aTag.setAttribute('href',f"https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place");
-        // aTag.innerText = "link text";
-        staticMap.appendChild(aTag);
+    var aTag = document.createElement('a');
+    aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
+    // aTag.innerText = "link text";
+    staticMap.appendChild(aTag);
     
 }
 
