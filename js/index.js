@@ -6,6 +6,26 @@ function onGeoOk(position){
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;
+
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+    // var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    var moveLatLon = new kakao.maps.LatLng(lat, lon);
+        
+    // 지도 중심을 이동 시킵니다
+    map.setCenter(moveLatLon);
+
+    var markerPosition  = new kakao.maps.LatLng(lat, lon);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+
     fetch(url).then(response => response.json()).then(data => {
         const city = document.querySelector("#location p:first-Child")
         const weather = document.querySelector("#location p:nth-Child(2)")
@@ -22,25 +42,6 @@ function onGeoError(){
 
 navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError)
 
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-    mapOption = { 
-        center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
-
-// var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-var moveLatLon = new kakao.maps.LatLng(lat, lon);
-    
-// 지도 중심을 이동 시킵니다
-map.setCenter(moveLatLon);
-
-
-var markerPosition  = new kakao.maps.LatLng(lat, lon);
-
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition
-});
 
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
