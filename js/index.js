@@ -1,4 +1,6 @@
 const API_KEY="d2c902d6ac6326cbb6156dacfebcb420"
+let lat;
+let lon;
 
 function onGeoOk(position){
     const lat = position.coords.latitude;
@@ -31,8 +33,7 @@ var moveLatLon = new kakao.maps.LatLng(lat, lon);
     
 // 지도 중심을 이동 시킵니다
 map.setCenter(moveLatLon);
-let lat;
-let lon;
+
 
 var markerPosition  = new kakao.maps.LatLng(lat, lon);
 
