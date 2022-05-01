@@ -4,6 +4,7 @@ function onGeoOk(position){
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;
+    var placeName = `강남동 짜장면`
 
     var markers = [
         {
@@ -11,7 +12,7 @@ function onGeoOk(position){
         },
         {
             position: new kakao.maps.LatLng(lat, lon), 
-            text: '텍스트를 표시할 수 있어요!' // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
+            text: 'placeName' // text 옵션을 설정하면 마커 위에 텍스트를 함께 표시할 수 있습니다     
         }
     ];
     
@@ -24,38 +25,11 @@ function onGeoOk(position){
     
     // 이미지 지도를 생성합니다
     var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+    
     var geocoder = new kakao.maps.services.Geocoder();
 
-    searchAddrFromCoords(map.getCenter(), displayCenterInfo);
+    searchAddrFromCoords(staticMap.getCenter(), displayCenterInfo);
 
-    // 지도를 클릭했을 때 클릭 위치 좌표에 대한 주소정보를 표시하도록 이벤트를 등록합니다
-    kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
-        searchDetailAddrFromCoords(mouseEvent.latLng, function(result, status) {
-            if (status === kakao.maps.services.Status.OK) {
-                var detailAddr = !!result[0].road_address ? '<div>도로명주소 : ' + result[0].road_address.address_name + '</div>' : '';
-                detailAddr += '<div>지번 주소 : ' + result[0].address.address_name + '</div>';
-                
-                var content = '<div class="bAddr">' +
-                                '<span class="title">법정동 주소정보</span>' + 
-                                detailAddr + 
-                            '</div>';
-    
-                // 마커를 클릭한 위치에 표시합니다 
-                marker.setPosition(mouseEvent.latLng);
-                marker.setMap(map);
-    
-                // 인포윈도우에 클릭한 위치에 대한 법정동 상세 주소정보를 표시합니다
-                infowindow.setContent(content);
-                infowindow.open(map, marker);
-            }   
-        });
-    });
-    
-    // 중심 좌표나 확대 수준이 변경됐을 때 지도 중심 좌표에 대한 주소 정보를 표시하도록 이벤트를 등록합니다
-    kakao.maps.event.addListener(map, 'idle', function() {
-        searchAddrFromCoords(map.getCenter(), displayCenterInfo);
-    });
-    
     function searchAddrFromCoords(coords, callback) {
         // 좌표로 행정동 주소 정보를 요청합니다
         geocoder.coord2RegionCode(coords.getLng(), coords.getLat(), callback);         
@@ -98,5 +72,3 @@ function onGeoError(){
 
 navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError)
 
-
-// 마커가 지도 위에 표시되도록 설정합니다
