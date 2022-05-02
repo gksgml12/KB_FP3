@@ -6,10 +6,14 @@
 #grid-item{
     border:1px solid black;
 }
-h1,.restu,descr{
+h1{
+    text-align: center;
+}
+.restu{
     text-align: center;
 }
 #descr{
+    text-align: center;
     border: 1px solid black
 }
 
