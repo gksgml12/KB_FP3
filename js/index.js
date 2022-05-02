@@ -50,7 +50,13 @@ function onGeoOk(position){
                 if (result[i].region_type === 'H') {
                     var addr=result[i].address_name;
                     var addr2=addr.split(' ')
-                    infoDiv.innerHTML = addr2[2];
+                    var addr3=addr2[2]
+                    infoDiv.innerHTML = addr;
+
+                    var aTag = document.createElement('a');
+                    aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
+                    // aTag.innerText = "link text";
+                    infoDiv.appendChild(aTag);
                     break;
                 }
             }
@@ -67,10 +73,7 @@ function onGeoOk(position){
         location.innerText= `위도: ${lat}  경도: ${lon}`
         });
 
-    var aTag = document.createElement('a');
-    aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
-    // aTag.innerText = "link text";
-    staticMap.appendChild(aTag);
+    
     
 }
 
