@@ -52,11 +52,11 @@ function onGeoOk(position){
                     var addr2=addr.split(' ')
                     var addr3=addr2[2]
                     infoDiv.innerHTML = addr;
-
-                    var aTag = document.createElement('a');
-                    aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
-                    // aTag.innerText = "link text";
-                    infoDiv.appendChild(aTag);
+                    infoDiv.innerHTML=`<a href=https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place>`+infoDiv.innerHTML+`</a>`
+                    // var aTag = document.createElement('a');
+                    // aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
+                    // // aTag.innerText = "link text";
+                    // infoDiv.appendChild(aTag);
                     break;
                 }
             }
