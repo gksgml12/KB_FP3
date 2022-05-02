@@ -49,7 +49,7 @@ function onGeoOk(position){
                 // 행정동의 region_type 값은 'H' 이므로
                 if (result[i].region_type === 'H') {
                     var addr=result[i].address_name;
-                    var addr2=adr.split(' ')
+                    var addr2=addr.split(' ')
                     infoDiv.innerHTML = addr2[2];
                     break;
                 }
