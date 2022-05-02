@@ -51,8 +51,10 @@ function onGeoOk(position){
                     var addr=result[i].address_name;
                     var addr2=addr.split(' ')
                     var addr3=addr2[2]
-                    infoDiv.innerHTML = addr;
+                    infoDiv.innerHTML = '<식당 정보 보기>';
                     infoDiv.innerHTML=`<a href=https://map.kakao.com/?map_type=DEFAULT&map_hybrid=false&q=강남동%20짜장면&from=total&from=total>`+infoDiv.innerHTML+`</a>`
+                    const city = document.querySelector("#location p:first-Child")
+                    city.innerText = `현재 위치: ${addr}`;
                     // var aTag = document.createElement('a');
                     // aTag.setAttribute('href',`https://map.kakao.com/?from=total&nil_suggest=btn&q=강남동20%짜장면&tab=place`);
                     // // aTag.innerText = "link text";
