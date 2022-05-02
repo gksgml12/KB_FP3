@@ -9,6 +9,9 @@
 h1{
     text-align: center;
 }
+#descr{
+    border: 1px solid black
+}
 
 
 /* div {
