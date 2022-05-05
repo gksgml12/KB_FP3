@@ -8,35 +8,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css/introduction.css" />
+    <link rel="stylesheet" href="css/mechuri.css" />
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-      /* Make the image fully responsive */
-      .carousel-inner img {
-        width: 400px;
-        height: 400px;
-      }
-      .carousel-inner {
-        margin-top: 50px;
-        text-align: center;
-      }
-      .mechuri {
-      }
-      .mechuri img {
-        text-align: center;
-        margin-left: 100px;
-        width: 100px;
-        height: 100px;
-      }
-      .carousel-indicators {
-        margin-bottom: 100px;
-      }
-      .slide {
-      }
-    </style>
   </head>
   <body>
+    <div class="greeting">
+      <h1>아직도 뭐먹을지 메뉴 고민을 하고 있나?</h1>
+      <h1>이제 <b>아무거나</b>라는 메뉴는 없다!</h1>
+      <p>결정장애인 너를 위해 메추리가 정해줄게!</p>
+    </div>
+    <div class="margin"></div>
+    <div class="mechuri">
+      <div class="mechuri1">
+        <img
+          src="https://cdn.discordapp.com/attachments/968536631512543262/969095495966404618/KakaoTalk_20220427_165546520-removebg-preview.png"
+          alt=""
+        />
+      </div class="mechuri2">
+        <p>안녕 나는 너의 <b>메</b>뉴를 <b>메</b>천하고 <b>리</b>뷰해줄 <b>메추리</b>야</p>
+        <p>니가 최근에 먹은 음식과 <a href="#">800여가지 음식</a>들의 영양소를 분석한 내용을 바탕으로 너에게 맞는 메뉴를 추천해줄게</p>
+        <p>추천해준 음식을 요리해 먹고 싶다면 <a href="#">레시피 추천</a></p>
+        <p>추천해준 음식을 가까운 식당에서 먹고싶다면 <a href="#">식당 추천</a></p>
+        <p>궁금하거나 건의할게 있으면 <a href="#">여기</a>에 말해줘</p>
+      </div>
+    </div>
+
     <div id="demo" class="carousel slide" data-ride="carousel">
       <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -48,52 +47,37 @@
           <img
             src="https://cdn.discordapp.com/attachments/968536631512543262/971847689996226600/1.jpg"
             alt="Los Angeles"
-            width="1100"
-            height="500"
           />
-          <div class="carousel-caption">
-            <!-- <h3>Los Angeles</h3>
-            <p>We had such a great time in LA!</p> -->
-          </div>
+          <div class="carousel-caption"></div>
         </div>
         <div class="carousel-item">
           <img
             src="https://cdn.discordapp.com/attachments/968536631512543262/971847690260451348/2.jpg"
             alt="Chicago"
-            width="1100"
-            height="500"
           />
-          <div class="carousel-caption">
-            <!-- <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p> -->
-          </div>
+          <div class="carousel-caption"></div>
         </div>
         <div class="carousel-item">
           <img
             src="https://cdn.discordapp.com/attachments/968536631512543262/971847690503725076/3.jpg"
             alt="New York"
-            width="1100"
-            height="500"
           />
-          <div class="carousel-caption">
-            <!-- <h3>New York</h3>
-            <p>We love the Big Apple!</p> -->
-          </div>
+          <div class="carousel-caption"></div>
         </div>
       </div>
-      <div class="mechuri">
-        <img
-          src="https://cdn.discordapp.com/attachments/968536631512543262/969095495966404618/KakaoTalk_20220427_165546520-removebg-preview.png"
-          alt=""
-        />
-        안녕 나는 메추리야
-      </div>
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
     </div>
+    <div class="margin"></div>
+    <div id="quote">
+      <h5 class="queoteTitle">많은 사람들이 잘못 알고 있는 음식 상식</h5>
+      <p>a</p>
+      <p>b</p>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+    <script src="js/quotes.js"></script>
   </body>
 </html>
