@@ -1,0 +1,53 @@
+body {
+    background-color: #DFD4E4;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.bg {
+  background-color: ivory;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75vw;
+  height: 93vh;
+
+  border-top-left-radius: 30px;
+}
+
+.greeting{
+    text-align: center;
+}
+.carousel-inner img {
+    width: 400px;
+    height: 400px;
+  }
+  .carousel-inner {
+    margin-top: 50px;
+    text-align: center;
+  }
+  .mechuri {
+  }
+  .mechuri img {
+    text-align: center;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  .carousel-indicators {
+    /* margin-bottom: 100px; */
+  }
+  .slide {
+  }
+
+  #quote{
+      text-align: center;
+  }
+
+  .margin{
+      height: 50px;
+  }
+
+  #quote p{
+      font-size: 8pt;
+  }
